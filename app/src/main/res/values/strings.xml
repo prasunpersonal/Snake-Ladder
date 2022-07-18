@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SNAKE AND LADDER</string>
+    <string name="player_1">Player 1</string>
+    <string name="player_2">Player 2</string>
+    <string name="won">Has Won !!!</string>
+    <string name="Heading">Snake And Ladder</string>
+    <string name="cmp">Computer</string>
+    <string name="player">Player</string>
+</resources>

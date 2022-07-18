@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".NamePagePVP">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:drawableLeft="@drawable/copyright"
+        android:gravity="center_vertical"
+        android:shadowColor="#FFFFFF"
+        android:text=" Copyright Prasun Sarkar | All Rights Reserved"
+        android:textAllCaps="true"
+        android:textColor="@color/Heading"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:drawableTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Player Name"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Player"
+            android:textColor="@color/Player_1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/FirstNameInput"
+            app:layout_constraintStart_toStartOf="@+id/FirstNameInput" />
+
+        <EditText
+            android:id="@+id/FirstNameInput"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:backgroundTint="@color/Player_1"
+            android:drawableLeft="@drawable/player_1"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Enter name..."
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:textColor="@color/Player_1"
+            android:textColorHint="@color/Hint"
+            android:textColorLink="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <Button
+            android:id="@+id/StartButton"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="50dp"
+            android:enabled="true"
+            android:fontFamily="sans-serif"
+            android:onClick="StartButton"
+            android:text="START"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:typeface="normal"
+            app:cornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FirstNameInput" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

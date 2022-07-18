@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".SelectionPage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5" />
+
+                <Button
+                    android:id="@+id/pvc"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/player_1"
+                    android:drawableRight="@drawable/pc"
+                    android:fontFamily="sans-serif-black"
+                    android:onClick="playesVScomputer"
+                    android:text="Player vs Computer"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="30dp"
+                    app:elevation="2dp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5" />
+
+                <Button
+                    android:id="@+id/pvp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/player_1"
+                    android:drawableRight="@drawable/player_2"
+                    android:fontFamily="sans-serif-black"
+                    android:onClick="playesVSplayer"
+                    android:text="Player vs Player"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="30dp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="280dp"
+        android:layout_height="17dp"
+        android:layout_marginBottom="20dp"
+        android:drawableLeft="@drawable/copyright"
+        android:gravity="center_vertical"
+        android:shadowColor="#FFFFFF"
+        android:text=" Copyright Prasun Sarkar | All Rights Reserved"
+        android:textAllCaps="true"
+        android:textColor="@color/Heading"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:drawableTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/Heading"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
