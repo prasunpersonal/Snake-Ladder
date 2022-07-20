@@ -16,7 +16,6 @@ public class PlayerVSPlayer extends AppCompatActivity {
 
     private final ImageView[] gamePosition = new ImageView[100];
     private final int[] diceState = new int[6];
-    private String[] Player_Names = new String[2];
     private String[] Final_Names = new String[2];
     ImageView diceImg1, diceImg2;
     TextView p1pt, p2pt, FirstPlayerName, SecondPlayerName, status;
@@ -323,16 +322,16 @@ public class PlayerVSPlayer extends AppCompatActivity {
         FirstPlayerName=findViewById(R.id.p1name);
         SecondPlayerName=findViewById(R.id.p2name);
         status=findViewById(R.id.status);
-        Player_Names = getIntent().getStringArrayExtra("Player_Names");
-        if (Player_Names[0].length()==0){
+        String[] player_Names = getIntent().getStringArrayExtra("Player_Names");
+        if (player_Names[0].length()==0){
             FirstPlayerName.setText(R.string.player_1);
         }else {
-            FirstPlayerName.setText(Player_Names[0]);
+            FirstPlayerName.setText(player_Names[0]);
         }
-        if (Player_Names[1].length()==0){
+        if (player_Names[1].length()==0){
             SecondPlayerName.setText(R.string.player_2);
         }else {
-            SecondPlayerName.setText(Player_Names[1]);
+            SecondPlayerName.setText(player_Names[1]);
         }
         Final_Names = new String[] {FirstPlayerName.getText().toString(), SecondPlayerName.getText().toString()};
         diceImg2.setEnabled(false);
