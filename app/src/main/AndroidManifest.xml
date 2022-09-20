@@ -1,25 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.SoftSkill.snake_and_ladder">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SnakeLadder">
-        <activity android:name="com.SoftSkill.snake_and_ladder.SelectionPage" android:screenOrientation="portrait">
+        android:theme="@style/Theme.SnakeAndLadder"
+        tools:targetApi="31"
+        tools:ignore="LockedOrientationActivity">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
-        <activity android:name="com.SoftSkill.snake_and_ladder.NamePagePVP" android:windowSoftInputMode="adjustResize" android:screenOrientation="portrait"/>
-        <activity android:name="com.SoftSkill.snake_and_ladder.NamePagePVC" android:windowSoftInputMode="adjustResize" android:screenOrientation="portrait"/>
-        <activity android:name="com.SoftSkill.snake_and_ladder.PlayerVSPlayer" android:screenOrientation="portrait"/>
-        <activity android:name="com.SoftSkill.snake_and_ladder.PlayerVSComputer" android:screenOrientation="portrait"/>
+        <activity android:name=".SelectionPage"
+            android:screenOrientation="portrait" />
+        <activity android:name=".NamePagePVP"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".NamePagePVC"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PlayerVSPlayer"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PlayerVSComputer"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
